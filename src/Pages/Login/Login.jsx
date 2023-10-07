@@ -4,24 +4,24 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 
 const Login = () => {
-    const {googleLogin,loginWithEmailAndPassword} = useContext(AuthContext);
+    const { googleLogin, loginWithEmailAndPassword, user } = useContext(AuthContext);
 
-    const handleGoogleLogin = () =>{
+    const handleGoogleLogin = () => {
         googleLogin()
-        .then(res=>console.log(res.user))
-        .catch(err=>console.error(err.message))
+            .then(res => console.log(res.user))
+            .catch(err => console.error(err.message))
     };
-    const handleLoginWithEmailAndPassword = e =>{
+    const handleLoginWithEmailAndPassword = e => {
         e.preventDefault();
-        
+
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-        console.log(email,password);
+        console.log(email, password);
 
-        loginWithEmailAndPassword(email,password)
-        .then(res=>console.log(res.user))
-        .catch(err=>console.error(err))
+        loginWithEmailAndPassword(email, password)
+            .then(res => console.log(res.user))
+            .catch(err => console.error(err))
 
     }
     return (
@@ -40,22 +40,24 @@ const Login = () => {
                             <span className="label-text text-base text-slate-600 font-bold">Password</span>
                         </label>
                         <input type="password" placeholder="Enter your password" name="password" className="input input-bordered" required />
-                        
+
                     </div>
                     <div className="form-control mt-6">
-                        <button type="submit" className="btn bg-orange-600 text-white">Login</button>
-                    </div>
-                      <p className="font-medium text-slate-600">Don't have an account? Please <Link className=" text-rose-700 underline font-bold" to='/register'>Register</Link></p>
-                      <div className="flex justify-evenly items-center">
+                            <button type="submit" className="btn bg-orange-600 text-white">Login</button>
+                        </div>
+                    
+
+                    <p className="font-medium text-slate-600">Don't have an account? Please <Link className=" text-rose-700 underline font-bold" to='/register'>Register</Link></p>
+                    <div className="flex justify-evenly items-center">
                         <hr className="w-[30%] mx-auto border-2" />
                         <p className="w-[30%] mx-[5%] text-lg font-semibold">Login with</p>
-                        <hr className="w-[30%] mx-auto border-2"/>
-                      </div>
-                      
+                        <hr className="w-[30%] mx-auto border-2" />
+                    </div>
+
                 </form>
                 <div className="text-center">
-                        <button onClick={handleGoogleLogin} className="btn btn-link text-lg font-bold text-rose-700">Google</button>
-                      </div>
+                    <button onClick={handleGoogleLogin} className="btn btn-link text-lg font-bold text-rose-700">Google</button>
+                </div>
             </div>
         </div>
     );
