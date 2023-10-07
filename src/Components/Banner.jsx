@@ -6,7 +6,7 @@ const Banner = () => {
 
     useEffect(()=>{
         AOS.init({duration:3000});
-    },[])
+    },[]);
     return (
         <div>
             <div className="hero min-h-[80vh] " style={{ backgroundImage: 'url(https://i.ibb.co/4tVtQ7m/Banner-Image.jpg)' }}>

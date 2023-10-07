@@ -1,0 +1,51 @@
+
+[
+  {
+    "id": 1,
+    "name": "Wedding Planning",
+    "image": "https://i.ibb.co/7K5hknS/Wedding.jpg",
+    "price": "$2,500 - $10,000",
+    "description": "Comprehensive wedding planning services encompassing venue selection, decor, ceremony coordination, and reception organization. We ensure your special day is stress-free and unforgettable. Contact us for a personalized consultation.",
+    "button": "Explore more"
+  },
+  {
+    "id": 2,
+    "name": "Birthday Party Packages",
+    "image": "https://i.ibb.co/Kh0NYFj/Birthday-Party.jpg",
+    "price": "$500 - $2,500",
+    "description": "Choose from our range of birthday party packages, including themed decor, entertainment, and catering. We handle all the details to make your celebration truly magical. Contact us to customize your package.",
+    "button": "Explore more"
+  },
+  {
+    "id": 3,
+    "name": "Anniversary Celebration Services",
+    "image": "https://i.ibb.co/nkVhPVM/Annivarsery-party.jpg",
+    "price": "$1,500 - $5,000",
+    "description": "Let us plan and execute a memorable anniversary celebration that reflects your unique love story. Our services include venue selection, romantic touches, and a stylish celebration. Contact us for options.",
+    "button": "Explore more"
+  },
+  {
+    "id": 4,
+    "name": "Baby Shower Planning",
+    "image": "https://i.ibb.co/W307b2K/Baby-Shower.jpg",
+    "price": "$400 - $1,200",
+    "description": "Create a delightful baby shower experience with our expert planning and themed decor. We take care of every detail to ensure your baby shower is a cherished memory. Contact us to start planning.",
+    "button": "Explore more"
+  },
+  {
+    "id": 5,
+    "name": "Engagement Party Coordination",
+    "image": "https://i.ibb.co/9yC4dfb/Engagement-Party.jpg",
+    "price": "$800 - $3,000",
+    "description": "Host an enchanting engagement party to celebrate your love and commitment. Our coordination services include venue selection, decor, and entertainment. Contact us to explore engagement party ideas.",
+    "button": "Explore more"
+  },
+  {
+    "id": 6,
+    "name": "Graduation Party Services",
+    "image": "https://i.ibb.co/pbqnrgs/Graduation-Party.jpg",
+    "price": "$600 - $2,000",
+    "description": "Celebrate your academic achievements with a memorable graduation party. We handle all aspects, from venue arrangements to entertainment, so you can focus on celebrating your success. Contact us to get started.",
+    "button": "Explore more"
+  }
+]
