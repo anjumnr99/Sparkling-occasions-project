@@ -7,7 +7,7 @@ const Services = ({services}) => {
 
   
     useEffect(()=>{
-        AOS.init({duration:2000});
+        AOS.init({duration:1000});
 
     },[]);
 
@@ -17,7 +17,7 @@ const Services = ({services}) => {
 
             </div>
             <div className=" text-center mb-7">
-                <div data-aos="fade-down" >
+                <div  >
                     <h1 className="text-5xl font-semibold mb-3 ">Services</h1>
                 </div>
                 
