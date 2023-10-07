@@ -1,9 +1,12 @@
+import Banner from "../../Components/Banner";
+import Services from "../../Components/Services";
 
 
 const Home = () => {
     return (
-        <div>
-            Home
+        <div className="block">
+            <Banner></Banner>
+            <Services></Services>
         </div>
     );
 };
