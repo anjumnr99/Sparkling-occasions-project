@@ -62,7 +62,7 @@ const Navbar = () => {
 
                     <button className="text-lg lg:text-xl font-semibold text-slate-600">
                         <NavLink
-                            to=""
+                            to="/login"
                             className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "  text-orange-500 font-bold" : ""
                             }
