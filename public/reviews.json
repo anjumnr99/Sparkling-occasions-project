@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "client_pic": "https://i.ibb.co/b3PFkRZ/client1.jpg",
+      "client_name": "Emily Smith",
+      "client_review": "I couldn't have asked for a better wedding planner. The attention to detail and creativity made our special day truly magical."
+    },
+    {
+      "id": 2,
+      "client_pic": "https://i.ibb.co/K96WxwV/client2.jpg",
+      "client_name": "David Johnson",
+      "client_review": "The birthday party they organized for my daughter was a hit! Everything from the decorations to the entertainment was perfect."
+    },
+    {
+      "id": 3,
+      "client_pic": "https://i.ibb.co/ZSRLtPq/client3.jpg",
+      "client_name": "Olivia Taylor",
+      "client_review": "Our anniversary celebration was beautifully planned and executed. They captured our love story perfectly."
+    },
+    {
+      "id": 4,
+      "client_pic": "https://i.ibb.co/m0KLmMY/client4.jpg",
+      "client_name": "James Wilson",
+      "client_review": "The baby shower they organized for my wife was adorable and stress-free. We were thrilled with the result."
+    },
+    {
+      "id": 5,
+      "client_pic": "https://i.ibb.co/K96WxwV/client2.jpg",
+      "client_name": "Sophia Davis",
+      "client_review": "Our engagement party was a dream come true. They turned our ideas into reality, and it was truly magical."
+    },
+    {
+      "id": 6,
+      "client_pic": "https://i.ibb.co/b3PFkRZ/client1.jpg",
+      "client_name": "Ethan Brown",
+      "client_review": "The graduation party they planned for me was fantastic. It was a memorable way to celebrate my achievements."
+    },
+    {
+      "id": 7,
+      "client_pic": "https://i.ibb.co/K96WxwV/client2.jpg",
+      "client_name": "Ava Martinez",
+      "client_review": "Their professionalism and creativity made our wedding day stress-free and full of joy. Highly recommended!"
+    },
+    {
+      "id": 8,
+      "client_pic": "https://i.ibb.co/b3PFkRZ/client1.jpg",
+      "client_name": "Noah Anderson",
+      "client_review": "The birthday party they organized for my son was a blast. The kids had so much fun, and it was hassle-free for us."
+    },
+    {
+      "id": 9,
+      "client_pic": "https://i.ibb.co/ZSRLtPq/client3.jpg",
+      "client_name": "Mia Rodriguez",
+      "client_review": "Our anniversary celebration was perfect in every way. They paid attention to every detail, and it was a night to remember."
+    },
+    {
+      "id": 10,
+      "client_pic": "https://i.ibb.co/m0KLmMY/client4.jpg",
+      "client_name": "Liam Garcia",
+      "client_review": "The baby shower they planned for my sister was adorable. It had a personal touch that made it special."
+    }
+  ]
+  

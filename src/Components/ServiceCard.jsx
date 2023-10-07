@@ -5,10 +5,10 @@ import { useEffect } from 'react';
 
 const ServiceCard = ({ service }) => {
     const { id, image, name, price, description, button } = service || {};
-    console.log(service);
+   
 
     useEffect(()=>{
-        AOS.init({duration:2000});
+        AOS.init({duration:1000});
 
     },[]);
 

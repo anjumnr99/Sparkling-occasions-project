@@ -5,14 +5,14 @@ import ServiceCard from './ServiceCard';
 
 const Services = ({services}) => {
 
-    console.log(services);
+  
     useEffect(()=>{
         AOS.init({duration:2000});
 
     },[]);
 
     return (
-        <div data-aos="fade-up" className=" max-w-[1440px] mx-auto   px-3 py-2 lg:px-10 lg:py-6 " >
+        <div data-aos="fade-up" className=" max-w-[1440px] mx-auto mb-20  px-3 py-2 lg:px-10 lg:py-6 " >
             <div className="my-10">
 
             </div>
