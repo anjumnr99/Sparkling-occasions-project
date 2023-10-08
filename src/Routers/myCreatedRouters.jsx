@@ -21,11 +21,15 @@ const myCreatedRouters = createBrowserRouter([
             },
             {
                path:'/about',
-               element:<About></About>
+               element:<PrivateRoute>
+                  <About></About>
+               </PrivateRoute>
             },
             {
                path:'/gallery',
-               element:<Gallery></Gallery>
+               element:<PrivateRoute>
+                  <Gallery></Gallery>
+               </PrivateRoute>
             },
             {
                path:'/login',

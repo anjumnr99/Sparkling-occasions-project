@@ -2,6 +2,7 @@ import { PiBuildings } from 'react-icons/pi';
 import { PiChatsBold } from 'react-icons/pi';
 import { TfiWrite } from 'react-icons/tfi';
 import { GiPartyPopper } from 'react-icons/gi';
+import Footer from '../../Components/Footer';
 
 
 const About = () => {
@@ -105,6 +106,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
