@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
+import { GiAutomaticSas } from "react-icons/gi";
 
 const Register = () => {
     const {signUpWithEmailAndPassword,userUpdate} = useContext(AuthContext);
@@ -24,6 +25,10 @@ const Register = () => {
           .then(res=>{
             userUpdate(name,image)
             .then(()=>{
+                setTimeout(()=>{
+                    window.location.reload();
+                },1000);
+                
                 toast.success('Profile successfully created')
                navigate('/')
             })

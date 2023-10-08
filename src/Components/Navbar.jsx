@@ -96,10 +96,10 @@ const Navbar = () => {
                                         </label>
 
                                     </div>
-
+                                    <p className=" text-center">{user.displayName}</p>
                                     <p className="">{user.email}</p>
-                                    <div className="flex items-center gap-2">
-                                        <p className=" text-center">{user.displayName}</p>
+                                   
+                                        
                                         <button onClick={handleLogOut} className="btn text-lg font-semibold text-slate-600">
                                             <NavLink
                                                 to="/login"
@@ -110,7 +110,7 @@ const Navbar = () => {
                                                 Logout
                                             </NavLink>
                                         </button>
-                                    </div>
+                                   
 
                                 </div>
 
