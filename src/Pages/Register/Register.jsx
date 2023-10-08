@@ -25,11 +25,8 @@ const Register = () => {
           .then(res=>{
             userUpdate(name,image)
             .then(()=>{
-                setTimeout(()=>{
-                    window.location.reload();
-                },1000);
-                
-                toast.success('Profile successfully created')
+               toast.success('Profile successfully created')  
+                window.location.reload(true);
                navigate('/')
             })
           })
