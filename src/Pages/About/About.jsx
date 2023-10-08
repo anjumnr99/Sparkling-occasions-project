@@ -9,7 +9,7 @@ const About = () => {
         <div className='bg-white'>
             <div>
                 <div className='max-w-[1440px] mx-auto  my-10  px-3 py-2 lg:px-8 lg:py-3 '>
-                    <div className=''>
+                    <div className='mt-10'>
                         <h1 className=' text-2xl lg:text-5xl font-semibold text-slate-800 text-center'><span className='text-orange-500 '>Hello!</span> We Are an Event Planning Agency</h1>
                         <p className=' text-base lg:text-md w-full lg:w-[50%] mx-auto font-semibold mt-10 mb-20 text-center text-slate-600'>As the premier event planning company in New York City, we know that it’s not “one size fits all”. Each event and client is unique and we believe our services should be as well. We know that it should be “Can I hire a planner?” not “Can I afford one?”.</p>
                     </div>
