@@ -1,21 +1,31 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Register = () => {
-    const {signUpWithEmailAndPassword} = useContext(AuthContext);
+    const {signUpWithEmailAndPassword,userUpdate} = useContext(AuthContext);
 
+    const navigate = useNavigate()
     const handleSignUpWithEmailAndPassword = e =>{
           e.preventDefault();
           const email = e.target.email.value;
           const password = e.target.password.value;
           const name = e.target.name.value;
-          
+          const image = e.target.image.value;
           console.log(email,password,name);
 
           signUpWithEmailAndPassword(email,password)
-          .then(res=>console.log(res.user))
-          .catch(err=>console.error(err))
+          .then(res=>{
+            userUpdate(name,image)
+            .then(()=>{
+                toast.success('Profile successfully created')
+               navigate('/')
+            })
+          })
+          .catch(err=>{
+            toast.success(err.message)
+          })
 
     };
     return (
@@ -29,12 +39,12 @@ const Register = () => {
                         </label>
                         <input type="text" placeholder="Enter your name" name="name" className="input input-bordered" required />
                     </div>
-                    {/* <div className="form-control">
+                    <div className="form-control">
                         <label className="label">
                             <span className="label-text text-base text-slate-600 font-bold">Img URL</span>
                         </label>
                         <input type="text" placeholder="Image URL" name="image" className="input input-bordered" />
-                    </div> */}
+                    </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text text-base text-slate-600 font-bold">Email</span>

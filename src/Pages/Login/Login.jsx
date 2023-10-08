@@ -1,15 +1,24 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 
 const Login = () => {
     const { googleLogin, loginWithEmailAndPassword, user } = useContext(AuthContext);
 
+    const navigate = useNavigate();
     const handleGoogleLogin = () => {
         googleLogin()
-            .then(res => console.log(res.user))
-            .catch(err => console.error(err.message))
+        .then(result => {
+            toast.success('Logged Successfully!')
+            navigate('/')
+        })
+        .catch(err => {
+            toast.error(err.message)
+            console.log(err)
+        })
+
     };
     const handleLoginWithEmailAndPassword = e => {
         e.preventDefault();
@@ -20,8 +29,15 @@ const Login = () => {
         console.log(email, password);
 
         loginWithEmailAndPassword(email, password)
-            .then(res => console.log(res.user))
-            .catch(err => console.error(err))
+             .then(result => {
+                toast.success('Logged Successfully!')
+                navigate('/')
+            })
+            .catch(err => {
+                toast.error(err.message)
+                console.log(err)
+            })
+    
 
     }
     return (

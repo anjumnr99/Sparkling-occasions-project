@@ -1,11 +1,15 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { RxAvatar } from 'react-icons/rx';
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
+
+    const navigate = useNavigate();
+
     const navLinks = <>
         <li className="text-md lg:text-xl font-semibold text-slate-600">
             <NavLink
@@ -40,8 +44,14 @@ const Navbar = () => {
 
     const handleLogOut = () => {
         logOut()
-            .then(res => console.log(res))
-            .catch(err => console.error(err))
+            .then(result => {
+                toast.success('Logout Successfully!')
+                navigate('/login')
+            })
+            .catch(err => {
+                toast.error(err.message)
+                console.log(err)
+            })
     }
 
 
@@ -132,17 +142,27 @@ const Navbar = () => {
 
                             </div>
                             :
-                            <button className="text-lg lg:text-xl font-semibold text-slate-600">
-                                <NavLink
-                                    to="/login"
-                                    className={({ isActive, isPending }) =>
-                                        isPending ? "pending" : isActive ? "  text-orange-500 font-bold" : ""
-                                    }
-                                >
-                                    Login
-                                </NavLink>
 
-                            </button>
+                            <div className="flex justify-center items-center gap-3">
+
+                                <label tabIndex={0} className="avatar">
+                                    <div className="">
+                                        <RxAvatar className="text-4xl"></RxAvatar>
+                                    </div>
+                                </label>
+
+                                <button className="text-lg lg:text-xl font-semibold text-slate-600">
+                                    <NavLink
+                                        to="/login"
+                                        className={({ isActive, isPending }) =>
+                                            isPending ? "pending" : isActive ? "  text-orange-500 font-bold" : ""
+                                        }
+                                    >
+                                        Login
+                                    </NavLink>
+
+                                </button>
+                            </div>
                     }
 
 

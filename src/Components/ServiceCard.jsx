@@ -2,15 +2,16 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ service }) => {
     const { id, image, name, price, description, button } = service || {};
-   
 
-    useEffect(()=>{
-        AOS.init({duration:1000});
 
-    },[]);
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+
+    }, []);
 
     return (
         <div>
@@ -27,7 +28,9 @@ const ServiceCard = ({ service }) => {
 
                         <div className="flex justify-between items-center my-2 ">
                             <p className=' text-yellow-600 text-base lg:text-lg font-bold'>{price}</p>
-                            <button className="btn bg-rose-500 text-white">{button}</button>
+                            <Link to={`/services/${id}`}>
+                                <button className="btn bg-rose-500 text-white hover:bg-rose-800 hover:text-white">{button}</button>
+                            </Link>
                         </div>
                     </div>
                 </div>

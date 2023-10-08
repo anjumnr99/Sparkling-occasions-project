@@ -17,7 +17,7 @@ const Banner = () => {
 
                 <div className=" ">
 
-                    <div className=" max-w-xl text-left mt-2">
+                    <div className=" max-w-xl text-left my-4">
                         <div data-aos="fade-left" className='ml-4'>
                             <p className="mb-5 text-2xl md:text-3xl lg:text-4xl text-white font-extrabold italic">Let's have a party!</p>
                         </div>
