@@ -8,11 +8,12 @@ const Login = () => {
     const { googleLogin, loginWithEmailAndPassword, user } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
+    
     const handleGoogleLogin = () => {
         googleLogin()
         .then(result => {
-            toast.success('Logged Successfully!')
-            navigate('/')
+            toast.success('Logged Successfully!');
+            navigate(location?.state ? location.state : '/')
         })
         .catch(err => {
             toast.error(err.message)

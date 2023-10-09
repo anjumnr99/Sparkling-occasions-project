@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
 import { GiAutomaticSas } from "react-icons/gi";
@@ -7,7 +7,8 @@ import { GiAutomaticSas } from "react-icons/gi";
 const Register = () => {
     const {signUpWithEmailAndPassword,userUpdate} = useContext(AuthContext);
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
     const handleSignUpWithEmailAndPassword = e =>{
           e.preventDefault();
           const email = e.target.email.value;
@@ -25,9 +26,15 @@ const Register = () => {
           .then(res=>{
             userUpdate(name,image)
             .then(()=>{
+                setTimeout(()=>{
+                window.location.reload();
+               },1000);
+               
                toast.success('Profile successfully created')  
-                window.location.reload(true);
-               navigate('/')
+               navigate('/');
+               
+               
+               
             })
           })
           .catch(err=>{

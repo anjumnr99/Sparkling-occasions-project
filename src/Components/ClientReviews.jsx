@@ -18,7 +18,6 @@ const ClientReviews = () => {
             AOS.init({ duration: 2000 });
     }, []);
 
-    console.log(reviews);
 
     // const responsive = {
     //     0: { item: 1 },
